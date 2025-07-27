@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header>
+        <h1>Andrej's Diner</h1>
+        <h3>The best burgers and pizzas in town.</h3>
+    </header>
+
+    <div id="menu"></div>
+
+    <div id="order" class="hidden">
+        <h2>Your Order</h2>
+        <div id="items-order">
+
+        </div>
+        <h3>Total: <span></span></h3>
+
+        <button id="complete-order">Complete order</button>
+    </div>
+
+        <form id="pay-form" class="hidden pay-form-visible" onsubmit="return false">
+            <h2>Enter card details</h2>
+
+            <input id="customer-name" type="text" placeholder="Enter your name" required>
+            <input type="text" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19"
+                placeholder="Enter card number" required/>
+            <input type="text" inputmode="numeric" pattern="[0-9\s]{3,4}" maxlength="4" placeholder="Enter CVV" required>
+            <button type="submit" id="pay-btn">Pay</button>
+
+        </form>
+
+        <div id="thanks" class="hidden">
+
+        </div>
+
+    <script src="index.js" type="module" defer></script>
+</body>
+
+</html>
